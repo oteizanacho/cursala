@@ -14,8 +14,14 @@ const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.set('view engine', 'ejs');
 
-app.get('/', indexRouter);
-app.use('/login', loginRouter)
+app.get('/', indexRouter)
+
+function logStuff(req, res, next){
+    console.log('middleware')
+    next()
+}
+
+app.use('/login', logStuff, loginRouter)
 
 app.listen(port, () => {
     console.log(`running on http://localhost:3000`);
