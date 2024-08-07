@@ -2,7 +2,8 @@ import ejs from 'ejs';
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import indexRouter from './routes/index.js';
+import indexRouter from '../routes/index.js';
+import loginRouter from '../routes/login.js'
 
 const app = express();
 const port = 3000;
@@ -14,6 +15,7 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 app.set('view engine', 'ejs');
 
 app.get('/', indexRouter);
+app.use('/login', loginRouter)
 
 app.listen(port, () => {
     console.log(`running on http://localhost:3000`);
