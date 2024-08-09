@@ -19,7 +19,7 @@ header img{
     margin: 5px;
     margin-left: 15px;
 }
-
+/*
 header nav{
     margin-right: 20px;
 }
@@ -36,7 +36,8 @@ header nav a{
 header nav a:hover{
     border-bottom: 1px solid black;
 }
-
+*/
+/*
 main{
     background-color: aquamarine;
     height: 700px;
@@ -68,7 +69,7 @@ main{
     flex: 30%;
     border-radius: 0 35px 35px 0;
 }
-
+*/
 footer{
     border-top: 1px solid black;
     height: 100px;
@@ -79,4 +80,43 @@ footer{
 footer a{
     text-decoration: none;
     color: black;
+}
+
+#main-content{
+    background-color: aliceblue;
+    /*margin: 0 auto;*/
+    display: flex;
+    height: 720px;
+}
+
+#main-modal{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 500px;
+    align-items: center;
+}
+
+#btn-container{
+    margin: 20px 0px;
+}
+
+#btn-container button{
+    border: none;
+    background-color: aquamarine;
+    padding: 5px;
+    margin: 3px;
+}
+
+#btn-container button:hover{
+    border: 1px solid black;
+}
+
+#main-modal a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-top: 3px;
+    font-size: 18px;
 }

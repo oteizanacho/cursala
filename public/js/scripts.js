@@ -1,10 +1,15 @@
-const form = document.querySelector('form')
-form.addEventListener('submit', (e) => {
-    e.preventDefault()
-    console.log(e)
-    const username = document.getElementById('username').value
-    const password = document.getElementById('password').value
-    console.log(username, password)
+const universidades = document.getElementById('unibtn')
+const profesores = document.getElementById('profebtn')
+const materias = document.getElementById('matebtn')
+
+universidades.addEventListener('click', (e) => {
+    console.log('universidades')
 })
 
-console.log('script')
+profesores.addEventListener('click', (e) => {
+    console.log('profesores')
+})
+
+materias.addEventListener('click', (e) => {
+    console.log('materias')
+})
