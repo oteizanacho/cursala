@@ -16,8 +16,15 @@
         <div id="main-modal">
             <div id="btn-container">
                 <button id="unibtn">Universidades</button>
+                <a class="link" id="universidades" href="{% url 'facultad_list' %}">Universidades</a>
                 <button id="profebtn">Profesores</button>
+                <a class="link" href="{% url 'todos_profesores' %}">Profesores</a>
                 <button id="matebtn">Materias</button>
+                <a class="link" href="{% url 'todas_materias' %}">Materias</a>
+                <button id="topunibtn">Top Universidades</button>
+                <a class="link" href="{% url 'top_facultades' %}">Top Universidades</a>
+                <button id="topprofebtn">Top Profesores</button>
+                <a class="link" href="{% url 'top_profesores' %}">Top Profesores</a>
             </div>
             <div id="link-container">
 

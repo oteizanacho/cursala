@@ -137,3 +137,7 @@ footer a{
     margin-top: 3px;
     font-size: 18px;
 }
+
+.link{
+    display: none;
+}
