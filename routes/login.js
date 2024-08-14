@@ -1,32 +1,19 @@
-import express from 'express'
+import { Router } from 'express';
+const router = Router();
 
-const router = express.Router()
+let users = []; 
 
+//mostrar el formulario de login
 router.get('/', (req, res) => {
-    res.render('login')
-})
+    res.render('login');
+});
 
+//registrar un nuevo usuario
 router.post('/', (req, res) => {
-    /*
-    const { username, password } = req.body
-    let newUser = {
-        username,
-        password
-    }
-    res.send(newUser)
-    */
-   const user = req.body;
-   console.log(user)
+    const { username, password } = req.body;
+    users.push({ username, password });
+    console.log(users);
+    res.status(201).send('Usuario registrado');
+});
 
-   res.send('request post')
-})
-  
-router.put('/', (req, res) => {
-    res.send('Request PUT')
-})
-  
-router.delete('/', (req, res) => {
-    res.send('Request DELETE')
-})
-
-export default router
+export default router;

@@ -1,28 +1,29 @@
-import ejs from 'ejs';
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import indexRouter from '../routes/index.js';
-import loginRouter from '../routes/login.js'
+import loginRoutes from '../routes/login.js';
+import ejs from 'ejs'
 
 const app = express();
 const port = 3000;
 
+//necesario para obtener __dirname en ES6
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-app.use(express.static(path.join(__dirname, '..', 'public')));
-app.set('view engine', 'ejs');
+//configuracion del view engine
+app.set('view engine', 'html');
+app.engine('html', ejs.renderFile)
 
-app.get('/', indexRouter)
+//archivos estaticos
+app.use(express.static(path.join(__dirname, '../public')));
 
-function logStuff(req, res, next){
-    console.log('middleware')
-    next()
-}
+//middleware para parsear el cuerpo de las peticiones como JSON
+app.use(express.json());
 
-app.use('/login', logStuff, loginRouter)
+//rutas
+app.use('/login', loginRoutes);
 
 app.listen(port, () => {
-    console.log(`running on http://localhost:3000`);
-})
+    console.log(`Servidor escuchando en http://localhost:${port}`);
+});

@@ -1,3 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #5a5a5a;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #5a5a5a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333;
+}
+/*
 * {
     box-sizing: border-box;
     margin: 0;
@@ -17,7 +55,7 @@ header img{
     margin-left: 20px;
     width: 150px;
 }
-/*
+
 header nav{
     margin-right: 20px;
 }
@@ -34,8 +72,7 @@ header nav a{
 header nav a:hover{
     border-bottom: 1px solid black;
 }
-*/
-/*
+
 main{
     background-color: aquamarine;
     height: 700px;
@@ -67,7 +104,7 @@ main{
     flex: 30%;
     border-radius: 0 35px 35px 0;
 }
-*/
+
 footer{
     margin-top: 15px;
     display: flex;
@@ -87,7 +124,7 @@ footer a{
 #main-content{
     padding: 20px 0px;
     background-color: aliceblue;
-    /*margin: 0 auto;*/
+    margin: 0 auto;
     display: flex;
     height: 720px;
     background-image: url('/img/fotomain.jpg');
@@ -141,3 +178,4 @@ footer a{
 .link{
     display: none;
 }
+*/
