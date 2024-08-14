@@ -7,7 +7,18 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    res.send('login')
+    /*
+    const { username, password } = req.body
+    let newUser = {
+        username,
+        password
+    }
+    res.send(newUser)
+    */
+   const user = req.body;
+   console.log(user)
+
+   res.send('request post')
 })
   
 router.put('/', (req, res) => {
